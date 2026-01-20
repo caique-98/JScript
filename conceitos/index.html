@@ -8,14 +8,19 @@
         body{
             font: normal 20px Arial;
         }
+
+        
     </style>
 </head>
 <body>
-
-    
+    <p>Aqui o resultado soma:</p>
+    <p>Aqui o resultado divisao:</p>
+    <p>ble <strong>ble</strong></p>
+    <div id="risos">akakakak</div>
+    <div id="seg">pussy</div>
     <script>
         // Concatenacao
-        nome = window.prompt('Qual teu nome?')
+        /*   nome = window.prompt('Qual teu nome?')
         window.alert('É um grande prazer, ' + nome + '.')
         
         alert('Então, ' + nome + '. Vamos praticar matemática?')
@@ -27,9 +32,25 @@
         n3 = prompt('Digite um número divisor:')
         rd = rs / n3
         Number(rd)
-        window.alert('O resultado da divisão da soma com o divisor é de ' + rd + '!')
+        window.alert('O resultado da divisão da soma com o divisor é de ' + rd + '!') 
 
-        document.write(`Olá, ${nome}. O resultado da sua soma foi ${rs}, e o resultado do cálculo total foi de ${rd}!`)
+        document.write(`Olá, ${nome}. O resultado da sua soma foi ${rs}, e o resultado do cálculo total foi de ${rd}!`)    */
+        p0 = document.getElementsByTagName('p')[0]
+        p1 = document.getElementsByTagName('p')[1] // captura pelo tipo. ex: div, p, h1, h2, body... Sempre colocar "[]" e o numero do tipo. Se for unico, entao sera sempre 0.
+        p2 = document.getElementsByTagName('p')[2]
+        corpo = document.getElementsByTagName('body')[0]
+        document.write(' ' + p2.innerText) // Somente adicao de texto
+        document.write(' <br> ' + p2.innerHTML)  // Adicao de texto E HTML(CSS)
+        p1.style.color = 'blue'
+        corpo.style.background = 'aquamarine'
+        div_risos = document.getElementById('risos') // captura pela id
+        div_risos.style.color = 'red'
+        div_risos.style.background = 'green'
+
+        div_seg = document.querySelector('div#seg')
+        div_seg.innerHTML = 'caralhoww' // Adiciona um texto de forma manual e substituindo o conteudo original!
+        div_seg.style.color = 'blue'
+        div_seg.style.background = 'purple'
     </script>
 </body>
 </html>
