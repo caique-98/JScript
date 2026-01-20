@@ -22,13 +22,11 @@
         n1 = Number(prompt('Digite um número:')) // String
         n2 = Number(prompt('Digite outro número:')) // String
         rs = n1 + n2
+        Number(rs)
         alert('O resultado da soma é ' + rs + '!')
         n3 = prompt('Digite um número divisor:')
-        Number(rs)
-        rs.toFixed(2).replace('.',',')
         rd = rs / n3
         Number(rd)
-        rd.toFixed(2)
         window.alert('O resultado da divisão da soma com o divisor é de ' + rd + '!')
 
         document.write(`Olá, ${nome}. O resultado da sua soma foi ${rs}, e o resultado do cálculo total foi de ${rd}!`)
