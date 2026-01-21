@@ -15,6 +15,9 @@
             background-color: green;
             color: white;
             text-align: center;
+            line-height: 190px;
+            margin-top: 20px;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -61,6 +64,28 @@
         div_seg.style.background = 'purple'
 
 
+
+        int = document.querySelector('div#inter')
+        int.addEventListener('click', clicar)
+        int.addEventListener('mouseenter', entrar)
+        int.addEventListener('mouseout', sair)
+
+        
+        function clicar(){
+            int.innerText = 'Clicou!'
+            int.style.background = 'red'
+            int.style.color = 'white'
+        }
+        function entrar(){
+            int.innerText = 'Entrou ^^'
+            int.style.background = 'green'
+            int.style.color = 'white'
+        }
+        function sair(){
+            int.innerText = 'Saiu :<'
+            int.style.background = 'yellow'
+            int.style.color = 'black'
+        }
     </script>
 </body>
 </html>
