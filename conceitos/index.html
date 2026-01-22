@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Jscript</title>
     <style>
         body{
@@ -19,6 +20,16 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
+        input{
+            width: 100px;
+            font: normal 18pt Arial;
+        }
+
+
+        div#rs{
+            margin-top: 1em;
+        }
     </style>
 </head>
 <body>
@@ -33,9 +44,20 @@
 
 
     <h1>Somando valores</h1>
-    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Somar" onclick="somar()" id="but">
+    <div id="rs">Resultado:?</div>
+
+
+    <h1>Sistemas de multas</h1>
+    Velocidade do veiculo: 
+    <input type="number" name="txtvel" id="txtvel">
+    Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="multa"></div>
+
+
 
     <script>
         // Concatenacao
@@ -58,8 +80,11 @@
         p1 = document.getElementsByTagName('p')[1] // captura pelo tipo. ex: div, p, h1, h2, body... Sempre colocar "[]" e o numero do tipo. Se for unico, entao sera sempre 0.
         p2 = document.getElementsByTagName('p')[2]
         corpo = document.getElementsByTagName('body')[0]
-        document.write(' ' + p2.innerText) // Somente adicao de texto
-        document.write(' <br> ' + p2.innerHTML)  // Adicao de texto E HTML(CSS)
+        
+        
+        /*   document.write(' ' + p2.innerText) // Somente adicao de texto
+        document.write(' <br> ' + p2.innerHTML) */  // Adicao de texto E HTML(CSS)
+
         p1.style.color = 'blue'
         corpo.style.background = 'aquamarine'
         div_risos = document.getElementById('risos') // captura pela id
@@ -97,14 +122,31 @@
 
 
         function somar(){
-            tn1 = document.getElementsByName('txtn1')
-            tn2 = document.getElementsByName('txtn2')
-            n1 = Number(tn1.value)
+            tn1 = document.querySelector('input#txtn1')
+            tn2 = document.querySelector('input#txtn2')
+            n1 = Number(tn1.value) // Necessario utilizar o value para a tag Number() atingir o valor da variavel.
             n2 = Number(tn2.value) 
-
             s = n1 + n2
-            document.write(`o Resultado da sua soma foi: ${s}`)
+            re = document.querySelector('div#rs')
+            re.innerHTML = `O resultado da sua soma entre ${n1} e ${n2} foi: <strong>${s}</strong>.`
         }
+
+        function calcular(){
+            
+            txtv = document.querySelector('input#txtvel')
+            vel = Number(txtv.value)
+            m = document.querySelector('div#multa')
+            
+            if (vel > 60) {
+                    m.innerHTML = `<P>Voce ultrapassou o caralho da velocidade permitida, seu bosta! Vai pagar caro! Seu cu andou a ${vel}Km/h.</P>`
+                    m.innerHTML += `<P>Pague sua multa, AGORA!!!!!!</P>`
+                } else {
+                    m.innerHTML = 'Ok'
+                }
+            
+            
+            }
+
     </script>
 </body>
 </html>
