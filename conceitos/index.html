@@ -29,6 +29,14 @@
     <div id="seg">pussy</div>
 
     <div id="inter">Interaja</div>
+
+
+
+    <h1>Somando valores</h1>
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+
     <script>
         // Concatenacao
         /*   nome = window.prompt('Qual teu nome?')
@@ -85,6 +93,17 @@
             int.innerText = 'Saiu :<'
             int.style.background = 'yellow'
             int.style.color = 'black'
+        }
+
+
+        function somar(){
+            tn1 = document.getElementsByName('txtn1')
+            tn2 = document.getElementsByName('txtn2')
+            n1 = Number(tn1.value)
+            n2 = Number(tn2.value) 
+
+            Number.s = n1 + n2
+            document.write(`o Resultado da sua soma foi: ${s}`)
         }
     </script>
 </body>
