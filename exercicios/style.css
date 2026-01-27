@@ -44,6 +44,21 @@ div.conteiner{
 .caixa-m{
     grid-area: 2 / 2 / 3 / 3;
     background-color: rgba(224, 195, 142, 0.616);
+    place-items: center center;
+    place-content: center;
+    
+}
+
+.manha{
+    width: 180px;
+    border-radius: 100%;
+    
+}
+.tarde{
+    display: none;
+}
+.noite{
+    display: none;
 }
 
 .caixa-f{
