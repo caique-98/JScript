@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    place-content: center;
+    place-items: center;
+}
+
+.conteiner{
+    background-color: aqua;
+    display: grid;
+    width: 700px;
+    height: 600px;
+    grid-template: 100px repeat(1, 1fr) 100px / repeat(3, 1fr);
+
+}
+
+.caixa-h{
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.caixa-m{
+    grid-area: 1 / 2 / 3 / 4;
+}
+
+.caixa-f{
+    grid-area: 1 / 3 / 4 / 4;
+}
