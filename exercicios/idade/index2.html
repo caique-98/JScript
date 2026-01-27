@@ -12,17 +12,29 @@
         <header class="caixa-h">
             <h1>Verificador de idade</h1>
         </header>
-        <aside class="borda-e"></aside>
-
-
         <main class="caixa-m">
-            <section>
+            <div>
+                <p>Ano de nascimento:
+                    <input type="number" name="txtano" id="txtano" min="0" max="120" >
+                </p>
+                <p>Sexo:
+                
+                   <input type="radio" name="radsex" id="mas" checked>
+                   <label for="mas">Masculino</label>
 
-            </section>
+                   
+                   <input type="radio" name="radsex" id="fem">
+                   <label for="fem">Feminino</label>
+                </p>
+                <p>
+                    <input type="button" value="Verificar" onclick="verificar()">
+                </p>
+            </div>
+            <div id="res" >
+                
+                <img src="" alt="" srcset="">
+            </div>
         </main>
-
-
-         <aside class="borda-d"></aside>
         <footer class="caixa-f">
             <p>@caique.98</p>
         </footer>
