@@ -17,8 +17,8 @@ function verificar(){
         res.style.textAlign = 'center'
         
         genero = ''
-        img = document.createElement('img')
-        img.setAttribute('id', 'foto')
+        img = document.createElement('img') // Os elementos img.src ='' nao funcionou aqui por algum motivo...   Entao crie um elemento img e atribua uma src a partir do JavaScript.
+        img.setAttribute('id', 'foto') // O equivalente a id="foto"
         if (fsex[0].checked){
             genero = 'masculino'
             img.style.marginTop = '20px'
