@@ -21,7 +21,7 @@ function verificar(){
         img.setAttribute('id', 'foto')
         if (fsex[0].checked){
             genero = 'masculino'
-            img.style.paddingTop = '5px'
+            img.style.marginTop = '20px'
             if (idade >= 0 && idade < 14){
                 img.setAttribute('src', 'crianca-m.webp')
                 
