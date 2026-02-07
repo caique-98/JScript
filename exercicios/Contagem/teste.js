@@ -2,14 +2,13 @@
 console.log('vamo')
 
 
+ini = 1
+passo = 5
 fim = 10
 
-passo = 1
-
-for(cont = 1; cont <= fim ; cont += passo){
+for(cont = 1; cont <= fim; cont += passo){
     console.log(cont)
 }
-
 
 
 
