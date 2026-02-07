@@ -11,6 +11,8 @@ for(cont = 1; cont <= fim; cont += passo){
 }
 
 
-
+for(cont >= ini; cont <= fim; cont += pass){
+        window.alert('oi')
+    }
 
 console.log('fim')
