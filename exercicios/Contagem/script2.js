@@ -15,7 +15,7 @@ function calcular(){
     
     
     for(cont >= ini; cont <= fim; cont += pass){
-        res.innerText  = 'oi'
+        document.window('oi')
     }
 
 }
