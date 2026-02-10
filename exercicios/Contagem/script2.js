@@ -1,21 +1,36 @@
 function calcular(){
-    ini = document.querySelector('input#inicio')
-    Number(ini.value)
-    fim = document.querySelector('input#fim')
-    Number(fim.value)
-    pass = document.querySelector('input#passo')
-    Number(pass.value)
-
-    res = document.querySelector('div#res')
-
-    // A contagem deve comecar pela variavel inicio.
-    // A contagem deve ir da variavel inicio ate a variavel fim.
-    // A contagem deve ser feita conforme a variavel passo. Ex: se inicio for 1, fim for 10, e passo for 1. Entao... 1, 2, 3, 4, 5, 6, 7, 8, 9, 10. Agora se passo for 2: 1, 3, 5, 7, 9, 10.
+    var ini = document.getElementById('iinicio')
+    var fim = document.getElementById('ifim')
+    var pass = document.getElementById('ipasso')
+    var res = document.getElementById('res')
 
     
-    
-    for(cont >= ini; cont <= fim; cont += pass){
-        document.window('oi')
+
+    if(ini.value.length == 0 || fim.value.length == 0 || pass.value.length == 0){ // Obriga o usuario a escolher um valor.
+        window.alert('valor invalido!')
+    } else{
+        res.innerHTML = `Contando: `
+
+        var i = Number(ini.value) // Necessario para transformar em numero, mesmo ja sendo um numero.
+        var f = Number(fim.value)
+        var p = Number(pass.value)
+        if(p <= 0){ // O site ira travar sem esta porra!
+            window.alert('caralhoooo. Considerarei passo = 1.')
+            p = 1
+        }
+        if(i < f){ // Se inicio for menor que fim.
+            for(var c = i; c <= f; c += p){ // Le se: (c) é igual a (i). Se (c) for menor ou igual a (f). (c) Ira somar e receber o valor de (p).
+                res.innerHTML += `${c} \u{1F449}`
+            }
+        } else{ // Se fim for menor que inicio.
+            for(var c = i; c >= f; c -= p){
+                res.innerHTML += ` ${c} \u{1F449}` // Emoji mao com dedo.
+            }
+        }
+        res.innerHTML += `\u{1F3C1}` // Bandeira final
     }
+    
+    
+    
 
 }
