@@ -6,7 +6,16 @@ function enviar(){
     s = document.querySelector('#isalar')
     s1 = Number(s.value)
     rs = document.getElementsByName('rads')
-    slct = document.querySelector('isel')
+
+    opts = [document.getElementsByTagName('option')[0]]
+    opts[1] = document.getElementsByTagName('option')[1]
+    opts[2] = document.getElementsByTagName('option')[2]
+    opts.push(document.getElementsByTagName('option')[3])
+    op = String(opts.value)
+
+    b = document.getElementsByTagName('body')[0]
+    b.style.background = 'gray'
+
 
     r = document.querySelector('div#res')
 
@@ -26,13 +35,10 @@ function enviar(){
     } else if(s.value <= 0){
         alert('???')
 
-    } else if(rs[0] == rs[0].checked){
-        alert('????')
-        
-    } else if (rs[0].checked){
-        r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = 'masculino'}, com ${i1} anos, com salario estimado em ${s1} reais.`
+    } else if (rs[0].checked && op.indexOf(0)){
+        r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = 'masculino'}, com ${i1} anos, com salario estimado em ${s1} reais. Por fim, atualmente ${op[0] = 'solteiro(a)'}.`
     } else{
-        r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = "feminino"}, com ${i1} anos, com salario estimado em ${s1} reais. Por fim, atualmente ${slct}.`
+        r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = "feminino"}, com ${i1} anos, com salario estimado em ${s1} reais. Por fim, atualmente ${op.indexOf(0)}.`
         
     }
     r.style.textAlign = 'center'
