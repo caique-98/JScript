@@ -25,16 +25,14 @@ function enviar(){
 
     } else if(s.value <= 0){
         alert('???')
-    // criar uma opcao zero tanto pra sexo quanto para estado civil, e se a opcao for igual a esta zero, mandar alert!
+
     } else if(rs[0] == rs[0].checked){
         alert('????')
-        if(rs[1] != rs[1].checked){
-            alert('?????')
-        }
+        
     } else if (rs[0].checked){
         r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = 'masculino'}, com ${i1} anos, com salario estimado em ${s1} reais.`
     } else{
-        r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = "feminino"}, com ${i1} anos, com salario estimado em ${s1} reais.`
+        r.innerHTML = `Ola, ${n1}. Como consta na verificacao, voce e um ser humano do sexo ${genero = "feminino"}, com ${i1} anos, com salario estimado em ${s1} reais. Por fim, atualmente ${slct}.`
         
     }
     r.style.textAlign = 'center'
