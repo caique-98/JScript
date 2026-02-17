@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="index.js"></script>
+    <style>
+        body{
+            place-content: center;
+            place-items: center;
+        }
+    </style>
     <title>TF3</title>
 </head>
 <body>
     <h1>Verificar</h1>
 
     <div>
-        <form action="cadastro.php">
+        <form action="">
             <label for="inome">Nome:</label>
-            <input type="text" name="" id="inome" minlength="3" min="3" required>
+            <input type="text" name="" id="inome" minlength="3" min="3" required placeholder="Digite seu nome.">
             <br> <br>
             <label for="idade">Idade:</label>
-            <input type="number" name="" id="idade" required>
+            <input type="number" name="" id="idade" placeholder="Digite sua idade em anos." required>
             <br> <br>
             <label for="isalar">Salario:</label>
-            <input type="number" name="" id="isalar" required>
+            <input type="number" name="" id="isalar" step="0.01" placeholder="R$ 0.00" required>
             <br> <br>
             <label for="sex">Sexo:</label>
             Masculino
@@ -27,10 +33,10 @@
             <input type="radio" name="rads" id="fem">
             <br> <br>
             <select name="" id="isel" required>
-                <option value="sa">Solteiro(a)</option>
-                <option value="sa">Casado(a)</option>
-                <option value="sa">Viuvo(a)</option>
-                <option value="sa">Divorciado(a)</option>
+                <option value="solteiro(a)">Solteiro(a)</option>
+                <option value="casado(a)">Casado(a)</option>
+                <option value="viuvo(a)">Viuvo(a)</option>
+                <option value="divorciado(a)">Divorciado(a)</option>
             </select> <br> <br>
             <input type="button" value="Enviar" onclick="enviar()">
             <input type="reset" value="Limpar">
