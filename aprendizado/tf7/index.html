@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D</title>
+</head>
+<body>
+    <div id="res">
+
+    </div>
+    <script>
+        num = [3, 7, 2, 3, 5]
+        r = document.getElementById('res')
+
+        i = 0
+        
+        for(s = 0; s < num.length; s++){
+            i += num[s]
+            
+            r.innerHTML = `A soma entre os valores e ${i}. <br>`
+            r.innerHTML += `O maior numero e ${num[1]}. <br>`
+            media = i / num.length
+            r.innerHTML += `A media do array e ${media}.`
+        }
+        r.innerHTML += `<br> Nosso array ${num}.`
+        
+        
+    </script>
+</body>
+</html>

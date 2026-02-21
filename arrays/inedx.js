@@ -12,12 +12,12 @@ console.log(`Nosso array e: ${num}.`)
 
 console.log(`Nosso primeiro elemento e ${num[0]}.`) // A ordem comeca a partir de 0, e nao de 1!
 
-/*
+
 
 for(pos=0; pos<num.length; pos++){ //   Length e o comprimento / tamanho do vetor/array. Le se: pos e igual a 0, enquanto pos for menor que o comprimento, ele ira incrementar o valor e receber.
     console.log(`A posicao ${pos} tem o valor ${num[pos]}.`)
 } 
-*/
+
 
 for(pos in num){ // Le se: para cada POS em NUM, me de console.log().
     console.log(`A posicao ${pos} tem o valor ${num[pos]}.`)
