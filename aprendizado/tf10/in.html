@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+<div>
+    num 1
+    <input type="number" name="" id="num1">
+    num 2
+    <input type="number" name="" id="num2">
+    <input type="button" value="Gerar" onclick="gerar()">
+</div>
+<div id="res"></div>
+
+<script>
+    function gerar(){
+        nu1 = document.getElementById('num1')
+        n1 = Number(nu1.value)
+        nu2 = document.getElementById('num2')
+        n2 =  Number(nu2.value)
+        ns = [n1, n2]
+        r = document.getElementById('res')
+        p = 1
+        r.innerHTML = ''
+        if(nu1.value.length == 0 || nu2.value.length == 0){
+            window.alert('nao')
+        } else{
+
+           for(c = n1; c <= n2; c += p){
+            
+            r.innerHTML += `${c}`
+            
+        } 
+            
+        }
+        
+        
+        
+    }
+</script>
+
+</body>
+</html>
