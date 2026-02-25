@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" name="" id="base">
+        <input type="number" name="" id="expo">
+        <input type="button" value="Gerar" onclick="ger()">
+    </div>
+    <div id="res"></div>
+    <script>
+        function ger(){
+            ba = document.getElementById('base')
+            b = Number(ba.value)
+            ex = document.getElementById('expo')
+            e = Number(ex.value)
+            r = document.getElementById('res')
+            if (ba.value.length == 0 || ex.value.length == 0){
+                alert('no!')
+            } else {
+                rs = b ** e
+
+                r.innerHTML = `${b}<sup>${e}</sup> = ${rs}. <br> A base: ${b} <br> Elevado a: ${e} <br> Tem o resultaddo: ${rs}.`
+            }
+        }
+    </script>
+</body>
+</html>

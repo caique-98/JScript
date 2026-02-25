@@ -21,6 +21,7 @@
         n1 = Number(nu1.value)
         nu2 = document.getElementById('num2')
         n2 =  Number(nu2.value)
+        ns = [n1, n2]
         r = document.getElementById('res')
         p = 1
         r.innerHTML = ''
@@ -30,10 +31,12 @@
 
            for(c = n1; c <= n2; c += p){
             
-            r.innerHTML += `${c}`
+            r.innerHTML += `<br> ${c}`
+            sn = n1 + n2
+
             
         } 
-            
+            r.innerHTML += `<br> Resultado entre os dois num: ${sn}`
         }
         
         
